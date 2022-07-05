@@ -1,1 +1,2 @@
-My Fuctions & Nested Loops
+low level programming
+functions nested loops
