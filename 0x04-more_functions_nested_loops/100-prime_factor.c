@@ -1,19 +1,23 @@
 #include <stdio.h>
+#include <math.h>
 
 
 
 int main(void)
 {
-	long int x = 612852475143;
-	long int py;
+	long a, maxf;
+	long number = 612852475143;
+	double square = sqrt(number);
 
-	for (py = 2; py < x; py++)
+	for (a = 1; a <= square; a++)
 	{
-		if (x % py == 0)
+		if (number % a == 0)
 		{
-			x = x / py;
+			maxf = number / a;
 		}
 	}
-	printf("%ld\n", py);
+
+	printf("%ld\n", maxf);
+
 	return (0);
 }

@@ -1,36 +1,36 @@
+#include "holberton.h"
 #include "main.h"
-#include <stdio.h>
-
 
 int main(void)
 {
-	int x = 1;
+	int a;
 
-	while (x < 101)
+	for (a = 1; a <= 100; a++)
 	{
-		if (x % 3 == 0 && x % 5 == 0)
+		if ((a % 3 == 0) && (a % 5 == 0))
 		{
-			printf("%s", "FizzBuzz");
+			printf("FizzBuzz");
 		}
-		else if (x % 3 == 0)
+		else if (a % 3 == 0)
 		{
-			printf("%s", "Fizz");
+			printf("Fizz");
 		}
-		else if (x % 5 == 0)
+		else if (a % 5 == 0)
 		{
-			printf("%s", "Buzz");
+			printf("Buzz");
 		}
 		else
 		{
-			printf("%d", x);
+			printf("%d", a);
 		}
 
-		if (x != 100)
+		if (a != 100)
 		{
-		printf(" ");
+			printf(" ");
 		}
-		x++;
 	}
+
 	printf("\n");
+
 	return (0);
 }

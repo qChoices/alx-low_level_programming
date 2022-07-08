@@ -1,31 +1,23 @@
 #include "main.h"
 #include <stdio.h>
-#include <stdlib.h>
-
-int _putchar(char c);
 
 
 
 void print_number(int n)
 {
+	unsigned int k = n;
 
-	unsigned int n1 = 0;
-
-	if  (n < 0)
+	if (n < 0)
 	{
-		n1 = -n;
+		n *= -1;
+		k = n;
 		_putchar('-');
 	}
 
-	else
-	{
-		n1 = n;
-	}
+	k /= 10;
 
-	if (n1 / 10)
-	{
-		print_number(n1 / 10);
-	}
+	if (k != 0)
+		print_number(k);
 
-	_putchar((n1 % 10) + '0');
+	_putchar((unsigned int) n % 10 + '0');
 }

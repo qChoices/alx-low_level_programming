@@ -1,21 +1,24 @@
 #include "main.h"
-#include <stdio.h>
 
-void print_square(int n)
+void print_square(int size)
 {
-	int x;
-	int y;
+	int a, b;
 
-	for (y = 0; y < n; y++)
+	if (size <= 0)
 	{
-		for (x = 0; x < n; x++)
+		_putchar('\n');
+	}
+	else
+	{
+		for (a = 0; a < size; a++)
 		{
-			_putchar('#');
+			for (b = 0; b < size; b++)
+			{
+				_putchar(35);
+			}
+
+			_putchar('\n');
 		}
-		_putchar('\n');
 	}
-	if (n <= 0)
-	{
-		_putchar('\n');
-	}
+
 }
