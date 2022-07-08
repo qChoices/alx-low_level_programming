@@ -6,26 +6,21 @@
  * @n : The number of lines using '#' characters to use per row and column
  * Return: Void.
  */
-
-void print_square(int size)
+void print_square(int n)
 {
-	int a, b;
+	int x;
+	int y;
 
-	if (size <= 0)
+	for (y = 0; y < n; y++)
+	{
+		for (x = 0; x < n; x++)
+		{
+			_putchar('#');
+		}
+		_putchar('\n');
+	}
+	if (n <= 0)
 	{
 		_putchar('\n');
 	}
-	else
-	{
-		for (a = 0; a < size; a++)
-		{
-			for (b = 0; b < size; b++)
-			{
-				_putchar(35);
-			}
-
-			_putchar('\n');
-		}
-	}
-
 }
